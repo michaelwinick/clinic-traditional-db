@@ -1,0 +1,15 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+  namespace: dapr-subscriber
+spec:
+  type: state.azure.blobstorage
+  version: v1
+  metadata:
+  - name: accountName
+    value: "mwdaprstorage"
+  - name: accountKey
+    value: "3UJuBj7BA2wUIvL2LTWwyQZBNYSjU+icgoW/6+N1nlLpNDv9H9OWIawfO0XjTyIUCNJcoXfch44788t0bHWuWQ=="
+  - name: containerName
+    value: "clinic-invitation-read-model"
